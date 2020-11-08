@@ -5,6 +5,8 @@ const initialState = {
   getLoading: false,
   getError: '',
   openedRoom: '',
+  openedChannel: '',
+  channelsForRooms: {},
 }
 
 export default function appReducer(state = initialState, action) {
@@ -35,13 +37,32 @@ export default function appReducer(state = initialState, action) {
       } else {
         newRooms = state.roomIds
       }
-      console.log('state data: ',[...state.data, action.payload])
+
+      let channelsForRooms = {}
+
+      if (state.data.length===0) {
+        channelsForRooms = {
+          [action.payload.roomId]: [action.payload.channelId]
+        }
+      } else {state.data.forEach((item, i) => {
+        if (!channelsForRooms[item.roomId]) {
+          channelsForRooms = {
+            ...channelsForRooms,
+            [item.roomId]: []
+          }
+        }
+        if (!channelsForRooms[item.roomId].some((channelId) => channelId === item.channelId)) {
+          channelsForRooms[item.roomId].push(item.channelId)
+        }
+      })}
+
       return {
         ...state,
         channels: newChannels,
         roomIds: newRooms,
         data: [...state.data, action.payload],
         getLoading: false,
+        channelsForRooms: channelsForRooms,
       };
 
     case 'GET_Messages_ERROR':
@@ -56,6 +77,13 @@ export default function appReducer(state = initialState, action) {
       return {
         ...state,
         openedRoom: action.payload
+      };
+
+    case 'OPEN_CHANNEL':
+      console.log('OPEN_CHANNEL')
+      return {
+        ...state,
+        openedChannel: action.payload
       };
 
     default:

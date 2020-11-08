@@ -3,10 +3,15 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import {useDispatch, useSelector} from "react-redux";
 import {makeStyles} from "@material-ui/core/styles";
-import {setActiveRoom} from "../Store/Actions/actions";
+import {setActiveRoom, setActiveChannel} from "../Store/Actions/actions";
 
-const ChannelList = ({messages = {}}) => {
+const ChannelList = ({messages}) => {
   const dispatch = useDispatch();
+
+  const handleClick = (channel,roomId) => {
+    dispatch(setActiveRoom(roomId))
+    dispatch(setActiveChannel(channel))
+  }
 
   const lastMessages = []
 
@@ -19,7 +24,7 @@ const ChannelList = ({messages = {}}) => {
     lastMessages.push(
       <div
         key={channel}
-        onClick={()=>dispatch(setActiveRoom(channel))}
+        onClick={()=>handleClick(channel,messagesOfChannel[0].roomId)}
       >
         <div>
           {messagesOfChannel[0].ts.toString()}

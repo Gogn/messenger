@@ -101,3 +101,12 @@ export function setActiveRoom(room) {
       });
   };
 }
+
+export function setActiveChannel(channel) {
+  return async (dispatch) => {
+    dispatch({
+      type: "OPEN_CHANNEL",
+      payload: channel,
+    });
+  };
+}

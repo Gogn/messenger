@@ -7,7 +7,7 @@ export default function CreateMessage() {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <div style={{display:'flex', justifyContent:'space-between', color:'blue',width:200,height:100}}>
+        <div style={{display:'flex', justifyContent:'space-between', backgroundColor:'blue',width:'100%',height:100}}>
 
         </div>
       </Box>
