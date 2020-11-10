@@ -23,14 +23,14 @@ export default function Home() {
   return (
     <div style={{height:'100vh', margin: 0, padding: 0, flex: 1}}>
 
-      <Button variant="contained" color="primary" onClick={ () => subscribeToMessages() }>
+      <Button variant="contained" style={{backgroundColor:'#e65800'}} onClick={ () => subscribeToMessages() }>
         @
       </Button>
 
       <Grid
         style={{
         textAlign: "center",
-        backgroundColor: '#f2f2f2',
+        backgroundColor: 'white',
         }}
         container
       >

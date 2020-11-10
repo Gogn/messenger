@@ -19,7 +19,7 @@ const ShowMessages = () => {
           if (message.roomId !== currentUser) {
             return (
               <div style={{marginBottom: 20}}>
-                <div style={{backgroundColor: 'gray'}}>
+                <div style={{backgroundColor: '#ffc099'}}>
             <span>
               {message.body}
               <br /><br />
@@ -32,14 +32,14 @@ const ShowMessages = () => {
                   display: 'flex',
                   justifyContent: 'flex-start'
                 }}>
-                  <div style={{height: 20, width: 20, backgroundColor: 'gray'}} />
+                  <div style={{height: 20, width: 20, backgroundColor: '#ffc099'}} />
                 </div>
               </div>
             )
           } else {
             return (
               <div style={{marginBottom: 20}}>
-                <div style={{backgroundColor: 'gray'}}>
+                <div style={{backgroundColor: '#ffc099'}}>
               <span>
                 {message.body}
                 <br /><br />
@@ -48,7 +48,7 @@ const ShowMessages = () => {
                 </div>
                 <div
                   style={{backgroundColor: 'transparent', width: '100%', display: 'flex', justifyContent: 'flex-end'}}>
-                  <div style={{height: 20, width: 20, backgroundColor: 'gray'}} />
+                  <div style={{height: 20, width: 20, backgroundColor: '#ffc099'}} />
                 </div>
               </div>
             )
@@ -61,7 +61,7 @@ const ShowMessages = () => {
           if (message.roomId !== currentUser) {
             return (
               <div style={{marginBottom: 20, marginTop: 20}}>
-                <div style={{backgroundColor: 'gray'}}>
+                <div style={{backgroundColor: '#ffc099'}}>
             <span>
               {message.body}
               <br /><br />
@@ -69,14 +69,14 @@ const ShowMessages = () => {
             </span>
                 </div>
                 <div  style={{backgroundColor: 'transparent', width: '100%', display:'flex', justifyContent:'flex-start'}}>
-                  <div style={{height: 20, width: 20, backgroundColor: 'gray'}} />
+                  <div style={{height: 20, width: 20, backgroundColor: '#ffc099'}} />
                 </div>
               </div>
             )
           } else {
             return (
               <div style={{marginBottom: 20}}>
-                <div style={{backgroundColor: 'gray'}}>
+                <div style={{backgroundColor: '#ffc099'}}>
               <span>
                 {message.body}
                 <br /><br />
@@ -84,7 +84,7 @@ const ShowMessages = () => {
               </span>
                 </div>
                 <div style={{backgroundColor: 'transparent', width: '100%', display:'flex', justifyContent:'flex-end'}}>
-                  <div style={{height: 20, width: 20, backgroundColor: 'gray'}} />
+                  <div style={{height: 20, width: 20, backgroundColor: '#ffc099'}} />
                 </div>
               </div>
             )

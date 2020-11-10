@@ -10,7 +10,7 @@ export default function CreateMessage() {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <form style={{display:'flex', justifyContent:'space-between', backgroundColor:'gray',width:'100%'}}>
+        <form style={{display:'flex', justifyContent:'space-between', backgroundColor:'#ff9959',width:'100%'}}>
           <TextField
             id="outlined-basic"  label="Outlined" variant="outlined"
             // onChangeText={text => onChangeText(text)}

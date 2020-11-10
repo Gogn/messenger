@@ -18,7 +18,7 @@ const ChatHeader = ({openedChannel, channels, openedRoom, channelsForRooms}) => 
       alignItems: 'center',
       width: '100%',
       height: '50px',
-      backgroundColor: 'gray',
+      backgroundColor: '#ff9959',
       padding: 10,
     }}>
       {channels[0] && <RoomSelector channels={channels} openedRoom={openedRoom} channelsForRooms={channelsForRooms} />}
@@ -58,7 +58,7 @@ const ChannelSelector = ({openedChannel, channelsForRooms, openedRoom, channels}
 
   if (showList) {
     return (
-      <List style={{backgroundColor: 'lightGray', marginTop:'100px', zIndex: 2}} component="nav" aria-label="contacts">
+      <List style={{backgroundColor: '#ffe0cc', marginTop:'100px', zIndex: 2}} component="nav" aria-label="contacts">
         {channelsList}
       </List>
     )
@@ -100,7 +100,7 @@ const RoomSelector = ({ channelsForRooms, openedRoom}) => {
 
   if (showList) {
     return (
-      <List style={{backgroundColor: 'lightGray', marginTop:'200px', zIndex: 2}} component="nav" aria-label="contacts">
+      <List style={{backgroundColor: '#ffe0cc', marginTop:'200px', zIndex: 2}} component="nav" aria-label="contacts">
         <ListItem button onClick={() => clearRoom()}>
           <ListItemText primary={'All rooms'} />
         </ListItem>

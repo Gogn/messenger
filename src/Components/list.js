@@ -24,18 +24,18 @@ const ChannelList = ({messages}) => {
       <Box
         key={channel}
         onClick={() => handleClick(channel, messagesOfChannel[0].roomId)}
-        style={{display:'flex', flexDirection:'row', marginBottom: 20, backgroundColor: 'gray', cursor: 'pointer'}}
+        style={{display:'flex', flexDirection:'row', marginBottom: 20, backgroundColor: '#ffc099', cursor: 'pointer'}}
         component={"button"}
       >
         <div style={{flex:4,borderRight: '1px solid black'}}>
           <div style={{borderBottom: '1px solid black'}}>
             {messagesOfChannel[0].roomId}
           </div>
-          <div>
+          <div style={{flex:4,borderBottom: '1px solid black'}}>
             {messagesOfChannel[0].ts.toString()}
           </div>
           <div>
-            {/*{messagesOfChannel[0].body}*/}
+            {messagesOfChannel[0].body}
           </div>
         </div>
         <div style={{flex:1}}>
