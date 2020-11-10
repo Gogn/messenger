@@ -26,13 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00a3830c-3d88-43e4-a618-963cfb307847" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/chatHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/chatHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/createMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/createMessage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +83,7 @@
       <workItem from="1604596151849" duration="1588000" />
       <workItem from="1604763728524" duration="17168000" />
       <workItem from="1604850033384" duration="19330000" />
-      <workItem from="1605027627582" duration="17373000" />
+      <workItem from="1605027627582" duration="17838000" />
     </task>
     <task id="LOCAL-00001" summary="ChatHistory">
       <created>1605048735480</created>
@@ -97,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605048735480</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Colors, readme">
+      <created>1605050479523</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605050479523</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +130,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ChatHistory" />
-    <option name="LAST_COMMIT_MESSAGE" value="ChatHistory" />
+    <MESSAGE value="Colors, readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Colors, readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1939" y="349" width="428" height="474" key="FileChooserDialogImpl" timestamp="1604918251312">
@@ -212,10 +215,10 @@
       <screen x="720" y="100" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/720.100.1920.1080/0.0.720.1280@720.100.1920.1080" timestamp="1604435580407" />
-    <state x="1753" y="337" width="804" height="518" key="Vcs.Push.Dialog.v2" timestamp="1605048744264">
+    <state x="1751" y="319" width="804" height="518" key="Vcs.Push.Dialog.v2" timestamp="1605050485860">
       <screen x="720" y="100" width="1920" height="1080" />
     </state>
-    <state x="1753" y="337" width="804" height="518" key="Vcs.Push.Dialog.v2/720.100.1920.1080/0.0.720.1280@720.100.1920.1080" timestamp="1605048744264" />
+    <state x="1751" y="319" width="804" height="518" key="Vcs.Push.Dialog.v2/720.100.1920.1080/0.0.720.1280@720.100.1920.1080" timestamp="1605050485860" />
     <state x="1864" y="329" width="592" height="580" key="find.popup" timestamp="1605031882130">
       <screen x="720" y="100" width="1920" height="1080" />
     </state>
