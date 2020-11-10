@@ -7,7 +7,8 @@ import {Button} from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import {setActiveChannel} from "../Store/Actions/actions";
+import {setActiveChannel, setActiveRoom, clearActiveRoom} from "../Store/Actions/actions";
+import ChatHistory from "./chatHistory";
 
 const ChatHeader = ({openedChannel, channels, openedRoom, channelsForRooms}) => {
   return (
@@ -16,22 +17,18 @@ const ChatHeader = ({openedChannel, channels, openedRoom, channelsForRooms}) => 
       justifyContent: 'space-between',
       alignItems: 'center',
       width: '100%',
-      height: '30px',
+      height: '50px',
       backgroundColor: 'gray',
       padding: 10,
     }}>
-      <div style={{
-        backgroundColor: 'darkGray'
-      }}>
-        {openedRoom}
-      </div>
+      {channels[0] && <RoomSelector channels={channels} openedRoom={openedRoom} channelsForRooms={channelsForRooms} />}
 
-      {channels && <ChannelSelector openedRoom={openedRoom} channels={channels} openedChannel={openedChannel} channelsForRooms={channelsForRooms} />}
+      {channels[0] && <ChannelSelector openedRoom={openedRoom} channels={channels} openedChannel={openedChannel} channelsForRooms={channelsForRooms} />}
     </div>
   )
 }
 
-const ChannelSelector = ({openedChannel, channelsForRooms, openedRoom}) => {
+const ChannelSelector = ({openedChannel, channelsForRooms, openedRoom, channels}) => {
   const [showList, setShowList] = useState(false)
   const dispatch = useDispatch();
 
@@ -49,11 +46,19 @@ const ChannelSelector = ({openedChannel, channelsForRooms, openedRoom}) => {
         </ListItem>
       )
     }
+  } else {
+    for (let channel of channels) {
+      channelsList.push(
+        <ListItem button onClick={(event) => handleClick(event, channel)}>
+          <ListItemText primary={channel} />
+        </ListItem>
+      )
+    }
   }
 
   if (showList) {
     return (
-      <List style={{backgroundColor: 'lightGray'}} component="nav" aria-label="contacts">
+      <List style={{backgroundColor: 'lightGray', marginTop:'100px', zIndex: 2}} component="nav" aria-label="contacts">
         {channelsList}
       </List>
     )
@@ -70,6 +75,51 @@ const ChannelSelector = ({openedChannel, channelsForRooms, openedRoom}) => {
   }
 }
 
+const RoomSelector = ({ channelsForRooms, openedRoom}) => {
+  const [showList, setShowList] = useState(false)
+  const dispatch = useDispatch();
+
+  const handleClick = (room) => {
+    setShowList(!showList)
+    dispatch(setActiveRoom(room))
+  }
+
+  const clearRoom = () => {
+    setShowList(!showList)
+    dispatch(clearActiveRoom())
+  }
+
+  let RoomsList = []
+    for (let room in channelsForRooms) {
+      RoomsList.push(
+        <ListItem button onClick={() => handleClick(room)}>
+          <ListItemText primary={room} />
+        </ListItem>
+      )
+    }
+
+  if (showList) {
+    return (
+      <List style={{backgroundColor: 'lightGray', marginTop:'200px', zIndex: 2}} component="nav" aria-label="contacts">
+        <ListItem button onClick={() => clearRoom()}>
+          <ListItemText primary={'All rooms'} />
+        </ListItem>
+        {RoomsList}
+      </List>
+    )
+  } else {
+    return (
+      <Button
+        style={{height: '50px'}}
+        variant="contained"
+        onClick={() => setShowList(!showList)}
+      >
+        {openedRoom}
+      </Button>
+    )
+  }
+}
+
 export default function Chat() {
   const openedChannel = useSelector(state => state.messages.openedChannel)
   const openedRoom = useSelector(state => state.messages.openedRoom)
@@ -81,8 +131,9 @@ export default function Chat() {
       <Box my={4}>
         <ChatHeader openedChannel={openedChannel} channels={channels} openedRoom={openedRoom} channelsForRooms={channelsForRooms} />
 
+        <ChatHistory  />
 
-        <CreateMessage />
+        { (openedRoom && openedChannel) && <CreateMessage />}
       </Box>
     </Container>
   );

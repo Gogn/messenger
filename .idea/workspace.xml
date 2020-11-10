@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="00a3830c-3d88-43e4-a618-963cfb307847" name="Default Changelist" comment="" />
+    <list default="true" id="00a3830c-3d88-43e4-a618-963cfb307847" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/chatHistory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/createMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/createMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Actions/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Actions/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Reducers/appReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Reducers/appReducer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jkJZWK9yFTebDABRyMoNlSlUWe" />
   <component name="ProjectViewState">
@@ -14,6 +45,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -51,19 +83,31 @@
       <workItem from="1604564210217" duration="9000" />
       <workItem from="1604596151849" duration="1588000" />
       <workItem from="1604763728524" duration="17168000" />
-      <workItem from="1604850033384" duration="18474000" />
+      <workItem from="1604850033384" duration="19330000" />
+      <workItem from="1605027627582" duration="15573000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1218" y="247" width="428" height="474" key="FileChooserDialogImpl" timestamp="1604823688370">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="1939" y="349" width="428" height="474" key="FileChooserDialogImpl" timestamp="1604918251312">
+      <screen x="720" y="100" width="1920" height="1080" />
     </state>
     <state x="1218" y="247" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1604823688370" />
-    <state x="1941" y="367" width="428" height="474" key="FileChooserDialogImpl/720.100.1920.1080/0.0.720.1280@720.100.1920.1080" timestamp="1604397242063" />
+    <state x="1939" y="349" width="428" height="474" key="FileChooserDialogImpl/720.100.1920.1080/0.0.720.1280@720.100.1920.1080" timestamp="1604918251312" />
     <state width="941" height="280" key="GridCell.Tab.0.bottom" timestamp="1604796833792">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -92,10 +136,10 @@
       <screen x="720" y="100" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/720.100.1920.1080/0.0.720.1280@720.100.1920.1080" timestamp="1604435580407" />
-    <state x="1864" y="329" width="592" height="580" key="find.popup" timestamp="1604861969911">
+    <state x="1864" y="329" width="592" height="580" key="find.popup" timestamp="1605031882130">
       <screen x="720" y="100" width="1920" height="1080" />
     </state>
-    <state x="1864" y="329" width="592" height="580" key="find.popup/720.100.1920.1080/0.0.720.1280@720.100.1920.1080" timestamp="1604861969911" />
+    <state x="1864" y="329" width="592" height="580" key="find.popup/720.100.1920.1080/0.0.720.1280@720.100.1920.1080" timestamp="1605031882130" />
     <state x="1019" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1604835145557">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

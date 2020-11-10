@@ -94,11 +94,20 @@ export function deleteMessage(id) {
 }
 
 export function setActiveRoom(room) {
+  console.log('setActiveRoom',room)
   return async (dispatch) => {
     dispatch({
         type: "OPEN_ROOM",
         payload: room,
       });
+  };
+}
+
+export function clearActiveRoom(room) {
+  return async (dispatch) => {
+    dispatch({
+      type: "CLEAR_ACTIVE_ROOM",
+    });
   };
 }
 

@@ -1,4 +1,5 @@
 const initialState = {
+  currentUser: 'Morty Smith',
   data: [],
   channels: [],
   roomIds: [],
@@ -38,23 +39,23 @@ export default function appReducer(state = initialState, action) {
         newRooms = state.roomIds
       }
 
-      let channelsForRooms = {}
+      let channelsForRooms = {...state.channelsForRooms}
 
       if (state.data.length===0) {
         channelsForRooms = {
           [action.payload.roomId]: [action.payload.channelId]
         }
-      } else {state.data.forEach((item, i) => {
-        if (!channelsForRooms[item.roomId]) {
+      } else {
+        if (!channelsForRooms[action.payload.roomId]) {
           channelsForRooms = {
             ...channelsForRooms,
-            [item.roomId]: []
+            [action.payload.roomId]: []
           }
         }
-        if (!channelsForRooms[item.roomId].some((channelId) => channelId === item.channelId)) {
-          channelsForRooms[item.roomId].push(item.channelId)
+        if (!channelsForRooms[action.payload.roomId].some((channelId) => channelId === action.payload.channelId)) {
+          channelsForRooms[action.payload.roomId].push(action.payload.channelId)
         }
-      })}
+      }
 
       return {
         ...state,
@@ -74,9 +75,17 @@ export default function appReducer(state = initialState, action) {
 
     case 'OPEN_ROOM':
       console.log('OPEN_ROOM')
+      console.log(action.payload)
       return {
         ...state,
         openedRoom: action.payload
+      };
+
+    case 'CLEAR_ACTIVE_ROOM':
+      console.log('CLEAR_ACTIVE_ROOM')
+      return {
+        ...state,
+        openedRoom: ''
       };
 
     case 'OPEN_CHANNEL':

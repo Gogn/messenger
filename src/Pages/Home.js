@@ -21,39 +21,28 @@ export default function Home() {
   }
 
   return (
-    <div style={{flexGrow: 1}}>
+    <div style={{height:'100vh', margin: 0, padding: 0, flex: 1}}>
 
       <Button variant="contained" color="primary" onClick={ () => subscribeToMessages() }>
         @
       </Button>
 
-      <Grid style={{
+      <Grid
+        style={{
         textAlign: "center",
         backgroundColor: '#f2f2f2',
-      }} container spacing={0}>
+        }}
+        container
+      >
 
-        <Grid item xs={12} sm={3}>
-          <div style={{
-            textAlign: "center",
-            background: 'gray',
-          }}>
+        <Grid item xs={12} sm={4} >
             <List />
-          </div>
         </Grid>
-        <Grid item xs={12} sm={3}>
-          <div style={{
-            textAlign: "center",
-          }}>
+        <Grid item xs={12} sm={4}>
             <Chat>bar</Chat>
-          </div>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <div style={{
-            textAlign: "center",
-            backgroundColor: 'grey',
-          }}>
+        <Grid item xs={12} sm={4}>
             <AllMessages>baz</AllMessages>
-          </div>
         </Grid>
 
       </Grid>
